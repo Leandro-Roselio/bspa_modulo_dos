@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Herramientas para Igualdad de Oportunidades</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .code-button-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            transition: all 0.3s;
+        }
+        .code-button-top:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+        }
+        .diagram-section {
+            padding: 40px;
+            background: #f9f9f9;
+            border-bottom: 3px solid #e0e0e0;
+        }
+        .diagram-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        .flows-section {
+            padding: 40px;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #4CAF50, #2196F3);
+            border-radius: 2px;
+        }
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .flow-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #e0e0e0;
+        }
+        .flow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        .flow-header {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .flow-diagram {
+            padding: 25px;
+            background: #fafafa;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: auto;
+        }
+        .flow-description {
+            padding: 25px;
+            background: white;
+            border-top: 2px solid #e0e0e0;
+        }
+        .flow-description h4 {
+            color: #4CAF50;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        .flow-description p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="code-button-top" onclick="abrirCodigos()">💻 Ver Códigos y Flujos N8N</button>
+            <h1>🌟 Sistema de Herramientas para Igualdad de Oportunidades</h1>
+            <p>Soluciones tecnológicas para la inclusión y accesibilidad</p>
+        </div>
+
+        <div class="diagram-section">
+            <div class="diagram-container">
+                <div class="mermaid">
+graph TD
+    A[Igualdad de Oportunidades<br/>para Personas con Discapacidad] --> B[Evaluación de Normativas]
+    A --> C[Implementación de Herramientas]
+    A --> D[Periodo de Prueba]
+    
+    B --> B1[Identificar Conflictos]
+    B --> B2[Optimizar Regulaciones]
+    B1 --> B3[Feedback Negativo]
+    B3 --> B2
+    
+    C --> C1[Accesibilidad Digital]
+    C --> C2[Automatización]
+    C --> C3[Tecnologías Asistivas]
+    C --> C4[Comunicación]
+    
+    C1 --> C1A[Lectores de Pantalla<br/>NVDA, JAWS]
+    C1 --> C1B[Reconocimiento de Voz<br/>Dragon]
+    C1 --> C1C[Magnificación<br/>ZoomText]
+    
+    C2 --> C2A[Zapier/Make<br/>Power Automate]
+    C2 --> C2B[RPA - UiPath]
+    C2 --> C2C[Ahorro de Tiempo<br/>Tareas Repetitivas]
+    
+    C3 --> C3A[Control Ocular<br/>Tobii]
+    C3 --> C3B[Teclados Adaptados]
+    C3 --> C3C[Interfaces Personalizadas]
+    
+    C4 --> C4A[Subtitulado IA<br/>Ava, Live Transcribe]
+    C4 --> C4B[Lengua de Señas<br/>SignAloud]
+    C4 --> C4C[Be My Eyes]
+    
+    D --> D1[Implementación Piloto<br/>3-6 meses]
+    D1 --> D2[Recolección de Datos]
+    D2 --> D3[Análisis de Resultados]
+    D3 --> D4{¿Efectivo?}
+    
+    D4 -->|Sí| E[Escalamiento]
+    D4 -->|No| F[Ajustes y Mejoras]
+    F --> D1
+    
+    E --> E1[Capacitación]
+    E --> E2[Despliegue Completo]
+    E --> E3[Monitoreo Continuo]
+    
+    E3 --> G[Mejora de Relaciones<br/>y Productividad]
+    C2C --> G
+    
+    style A fill:#4CAF50,color:#fff
+    style G fill:#2196F3,color:#fff
+    style D4 fill:#FF9800,color:#fff
+    style B3 fill:#f44336,color:#fff
+                </div>
+            </div>
+        </div>
+
+        <div class="flows-section">
+            <h2 class="section-title">Flujos de Trabajo para Personas con Discapacidad</h2>
+            
+            <div class="flow-grid">
+                <!-- Flujo 1 -->
+                <div class="flow-card">
+                    <div class="flow-header">1. Asistencia Visual con IA en Tiempo Real</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Persona Ciega] --> B[Activa Be My Eyes]
+    B --> C[Cámara Smartphone]
+    C --> D[IA GPT-4 Vision]
+    D --> E{Necesita Ayuda<br/>Humana?}
+    E -->|No| F[Respuesta IA Voz]
+    E -->|Sí| G[Conecta Voluntario]
+    G --> H[Videollamada]
+    H --> I[Asistencia Visual]
+    I --> J[Tarea Completada]
+    F --> J
+    J --> K[Registro Actividad]
+    K --> L[Análisis Mejora]
+    style A fill:#9C27B0,color:#fff
+    style J fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Una persona ciega necesita identificar productos en el supermercado. Abre Be My Eyes en su smartphone, apunta la cámara hacia los productos, y la IA de GPT-4 Vision analiza la imagen en tiempo real describiendo productos, precios, fechas de vencimiento y cualquier texto visible. Si la IA no puede resolver la consulta (objetos complejos o situaciones ambiguas), conecta automáticamente con un voluntario humano vía videollamada quien brinda asistencia personalizada. Cada interacción se registra para mejorar el sistema continuamente.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 2 -->
+                <div class="flow-card">
+                    <div class="flow-header">2. Sistema de Comunicación para Personas Sordas</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Reunión Laboral] --> B[Persona Sorda Presente]
+    B --> C[App Ava Activada]
+    C --> D[Captura Audio Ambiental]
+    D --> E[IA Transcripción]
+    E --> F[Identifica Hablantes]
+    F --> G[Subtítulos en Pantalla]
+    G --> H{Persona Sorda<br/>Desea Hablar?}
+    H -->|Sí| I[Escribe o Habla]
+    I --> J[Voz Sintetizada]
+    J --> K[Grupo Escucha]
+    H -->|No| L[Continúa Siguiendo]
+    K --> L
+    L --> M[Fin Reunión]
+    M --> N[Transcripción Completa]
+    N --> O[Email Automático]
+    style B fill:#2196F3,color:#fff
+    style O fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>En una reunión laboral con participantes oyentes y una persona sorda, se activa la aplicación Ava que captura todo el audio del ambiente. La IA transcribe en tiempo real con 95% de precisión, identifica quién está hablando mediante reconocimiento de voz, y muestra subtítulos sincronizados en la tablet o smartphone de la persona sorda. Si desea participar, puede escribir texto que se convierte a voz sintetizada o hablar directamente si tiene capacidad verbal.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 3 -->
+                <div class="flow-card">
+                    <div class="flow-header">3. Navegación Autónoma con Control Ocular</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Persona con Movilidad Reducida] --> B[Sistema Tobii Activado]
+    B --> C[Calibración Ocular]
+    C --> D[Usuario Mira Pantalla]
+    D --> E[Cursor Sigue Ojos]
+    E --> F{Desea Ejecutar?}
+    F -->|Parpadeo Doble| G[Click Ejecutado]
+    F -->|No| D
+    G --> H[Navegador Web]
+    H --> I[Lector Pantalla NVDA]
+    I --> J[Audio Describe Contenido]
+    J --> K{Usuario Necesita<br/>Escribir?}
+    K -->|Sí| L[Teclado Virtual]
+    L --> M[Escribe con Ojos]
+    K -->|No| N[Continúa Navegando]
+    M --> N
+    N --> O[Tarea Completada]
+    style A fill:#FF5722,color:#fff
+    style O fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Una persona con parálisis cerebral o ELA que no puede usar manos ni hablar, utiliza el sistema Tobii de control ocular. Primero se calibra el dispositivo siguiendo puntos en pantalla con la mirada durante 30 segundos. Luego, al mirar cualquier elemento de la pantalla, el cursor se mueve instantáneamente a esa posición. Para hacer clic, realiza un parpadeo doble intencional.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 4 -->
+                <div class="flow-card">
+                    <div class="flow-header">4. Proceso de Contratación Inclusiva Automatizada</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Candidato con Discapacidad] --> B[Portal Accesible WCAG]
+    B --> C[Formulario Adaptativo]
+    C --> D[Declara Necesidades]
+    D --> E[Power Automate Procesa]
+    E --> F[Asigna Ajustes Razonables]
+    F --> G[Entrevista Programada]
+    G --> H{Tipo de Discapacidad}
+    H -->|Visual| I[Video + Audio Descripción]
+    H -->|Auditiva| J[Video + Subtítulos + Intérprete]
+    H -->|Motriz| K[Entrevista Remota Adaptada]
+    I --> L[Evaluación Técnica]
+    J --> L
+    K --> L
+    L --> M[Formato Accesible Personalizado]
+    M --> N[Tiempo Extra si Necesario]
+    N --> O[Resultados a RRHH]
+    O --> P[Decisión Equitativa]
+    style A fill:#9C27B0,color:#fff
+    style P fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Un candidato con discapacidad ingresa al portal de empleos que cumple estándares WCAG 2.1 AA. Al completar el formulario, declara voluntariamente sus necesidades de accesibilidad. Power Automate procesa esta información y automáticamente asigna los ajustes razonables necesarios según el tipo de discapacidad.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 5 -->
+                <div class="flow-card">
+                    <div class="flow-header">5. Educación Virtual Accesible con Múltiples Canales</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Estudiante con Discapacidad] --> B[Plataforma LMS Moodle]
+    B --> C[Contenido Multimedia]
+    C --> D{Tipo Accesibilidad}
+    D -->|Visual| E[Lector Pantalla + Audio]
+    D -->|Auditiva| F[Subtítulos + Transcripción]
+    D -->|Cognitiva| G[Texto Simplificado]
+    E --> H[Material Adaptado]
+    F --> H
+    G --> H
+    H --> I[Clase Virtual Zoom]
+    I --> J[Grabación Automática]
+    J --> K[IA Genera Subtítulos]
+    K --> L[Crea Resumen Accesible]
+    L --> M[Evaluación Adaptativa]
+    M --> N[Formato Personalizado]
+    N --> O[Tiempo Extendido]
+    O --> P[Entrega Assignment]
+    P --> Q[Feedback Accesible]
+    style A fill:#673AB7,color:#fff
+    style Q fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Un estudiante con discapacidad accede a la plataforma Moodle completamente adaptada. Según su perfil, el contenido se presenta en formato óptimo. Durante clases virtuales en Zoom, todo se graba automáticamente, la IA genera subtítulos precisos y crea resúmenes estructurados.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 6 -->
+                <div class="flow-card">
+                    <div class="flow-header">6. Asistente de Transporte Público Inteligente</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Usuario con Movilidad Reducida] --> B[App Transporte]
+    B --> C[Ingresa Destino por Voz]
+    C --> D[IA Analiza Accesibilidad]
+    D --> E[Verifica Rampas/Elevadores]
+    E --> F[Calcula Ruta Óptima]
+    F --> G[Muestra Opciones Accesibles]
+    G --> H[Usuario Selecciona]
+    H --> I[Reserva Espacio Prioritario]
+    I --> J[Notifica a Conductor]
+    J --> K[GPS Tracking Tiempo Real]
+    K --> L[Alerta Próxima Parada]
+    L --> M{Llegó Destino?}
+    M -->|No| K
+    M -->|Sí| N[Aviso Vibración + Audio]
+    N --> O[Conductor Asiste Descenso]
+    O --> P[Usuario Califica Servicio]
+    P --> Q[Datos Mejoran Sistema]
+    style A fill:#FF5722,color:#fff
+    style Q fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Una persona en silla de ruedas necesita llegar a una cita médica. Abre la app de transporte y mediante comando de voz ingresa su destino. La IA analiza en tiempo real qué autobuses tienen accesibilidad completa verificando con sensores IoT del sistema de transporte.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 7 -->
+                <div class="flow-card">
+                    <div class="flow-header">7. Sistema de Salud Mental con Soporte Adaptado</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Persona con Discapacidad] --> B[Crisis Emocional]
+    B --> C[Accede App Salud Mental]
+    C --> D{Canal Preferido}
+    D -->|Texto| E[Chat con IA Terapéutica]
+    D -->|Voz| F[Llamada Asistente Virtual]
+    D -->|Lengua Señas| G[Video Avatar Señas]
+    E --> H[Evalúa Nivel Urgencia]
+    F --> H
+    G --> H
+    H --> I{Requiere Profesional?}
+    I -->|No| J[Técnicas Autoayuda]
+    I -->|Sí| K[Conecta Psicólogo]
+    J --> L[Ejercicios Respiración]
+    K --> M[Videoconsulta Accesible]
+    M --> N[Historial Médico Disponible]
+    L --> O[Seguimiento Automático]
+    N --> O
+    O --> P[Recordatorios Medicación]
+    P --> Q[Check-in Semanal]
+    Q --> R[Ajusta Plan Tratamiento]
+    style B fill:#f44336,color:#fff
+    style R fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Una persona con discapacidad física y ansiedad experimenta una crisis emocional. Accede a la app de salud mental que ofrece múltiples canales según su preferencia. La IA terapéutica evalúa el nivel de urgencia y conecta con profesionales si es necesario.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 8 -->
+                <div class="flow-card">
+                    <div class="flow-header">8. Espacio de Trabajo Inteligente Auto-Adaptable</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Empleado con Discapacidad] --> B[Llega a Oficina]
+    B --> C[Badge RFID Detectado]
+    C --> D[Sistema Identifica Perfil]
+    D --> E[Carga Configuración Personal]
+    E --> F{Tipo Adaptación}
+    F -->|Visual| G[Escritorio Ajusta Altura]
+    F -->|Auditiva| H[Activa Bucle Magnético]
+    F -->|Motriz| I[Teclado Adaptado Aparece]
+    G --> J[Monitor Amplia Texto]
+    H --> J
+    I --> J
+    J --> K[Iluminación Personalizada]
+    K --> L[Temperatura Ajustada]
+    L --> M[Software Asistivo Carga]
+    M --> N[Jornada Laboral]
+    N --> O[Sensores Monitorean]
+    O --> P{Detecta Fatiga?}
+    P -->|Sí| Q[Sugiere Descanso]
+    P -->|No| N
+    Q --> R[Usuario Acepta]
+    R --> S[Sistema Registra Datos]
+    S --> T[Optimiza Configuración]
+    style A fill:#9C27B0,color:#fff
+    style T fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Un empleado con discapacidad visual severa llega a la oficina y pasa su badge RFID. Los sensores IoT identifican instantáneamente su perfil de accesibilidad y cargan su configuración guardada automáticamente.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 9 -->
+                <div class="flow-card">
+                    <div class="flow-header">9. Capacitación Laboral con Realidad Virtual Adaptada</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Nuevo Empleado Discapacidad] --> B[Programa Onboarding VR]
+    B --> C[Evalúa Perfil Accesibilidad]
+    C --> D{Adapta Experiencia VR}
+    D -->|Visual| E[Audio Espacial 3D Detallado]
+    D -->|Auditiva| F[Visuales Aumentadas + Subtítulos]
+    D -->|Motriz| G[Control Voz + Mirada]
+    E --> H[Simulación Puesto Trabajo]
+    F --> H
+    G --> H
+    H --> I[Entorno Virtual Realista]
+    I --> J[Practica Tareas Reales]
+    J --> K[IA Evalúa Desempeño]
+    K --> L{Domina Habilidad?}
+    L -->|No| M[Ajusta Dificultad]
+    M --> J
+    L -->|Sí| N[Certificación Virtual]
+    N --> O[Transición Trabajo Real]
+    O --> P[Mentor Asignado]
+    P --> Q[Seguimiento 90 Días]
+    Q --> R[Evaluación Éxito]
+    style A fill:#673AB7,color:#fff
+    style R fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Un nuevo empleado con discapacidad auditiva ingresa al programa de capacitación en Realidad Virtual. El sistema adapta completamente la experiencia VR según su perfil de accesibilidad permitiendo práctica segura de tareas reales.</p>
+                    </div>
+                </div>
+
+                <!-- Flujo 10 -->
+                <div class="flow-card">
+                    <div class="flow-header">10. Detector de Emergencias con Respuesta Automática</div>
+                    <div class="flow-diagram">
+                        <div class="mermaid">
+graph TD
+    A[Persona con Discapacidad] --> B[Dispositivo Wearable]
+    B --> C[Sensores Monitoreando]
+    C --> D{Detecta Emergencia?}
+    D -->|No| C
+    D -->|Sí| E[Alerta Activada]
+    E --> F[Envía Ubicación GPS]
+    F --> G[Notifica Contactos]
+    G --> H[Llama Servicios Emergencia]
+    H --> I[Transmite Datos Médicos]
+    I --> J[Ambulancia Despachada]
+    J --> K[Vecinos Alertados]
+    K --> L[Cámaras Activan Grabación]
+    L --> M[Paramédicos Llegan]
+    M --> N[Acceso Historial Médico]
+    N --> O[Atención Apropiada]
+    O --> P[Seguimiento Hospitalario]
+    style A fill:#E91E63,color:#fff
+    style P fill:#4CAF50,color:#fff
+                        </div>
+                    </div>
+                    <div class="flow-description">
+                        <h4>Descripción del flujo:</h4>
+                        <p>Una persona con discapacidad motriz y cardiopatía usa un smartwatch que monitorea constantemente signos vitales. Al detectar una emergencia (caída, arritmia, presión anormal), activa automáticamente un protocolo: envía ubicación GPS exacta, notifica a contactos de emergencia, llama al 911 transmitiendo datos médicos críticos, alerta a vecinos cercanos registrados, activa grabación de cámaras de seguridad del hogar. Cuando llegan los paramédicos, tienen acceso inmediato al historial médico completo, medicamentos actuales, alergias y condiciones preexistentes, garantizando atención óptima y rápida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                fontSize: '14px'
+            }
+        });
+
+        function abrirCodigos() {
+            const ventanaCodigo = window.open('', '_blank', 'width=1400,height=900');
+            ventanaCodigo.document.write(`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Códigos y Flujos N8N - Sistema de Igualdad</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"><\/script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 15px;
+        }
+        .flow-section {
+            background: #252526;
+            border: 2px solid #3e3e42;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .flow-section h2 {
+            color: #2196F3;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-left: 5px solid #2196F3;
+            padding-left: 15px;
+        }
+        .split-view {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .n8n-flow {
+            background: #2d2d30;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .n8n-flow h3 {
+            color: #FF9800;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .code-block {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            overflow-x: auto;
+        }
+        .code-block h3 {
+            color: #ce9178;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        pre {
+            margin: 0;
+        }
+        code {
+            color: #ce9178;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .mermaid {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .simple-code {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Códigos Mermaid y Flujos N8N</h1>
+
+        <!-- Flujo 1 -->
+        <div class="flow-section">
+            <h2>1. Asistencia Visual con IA en Tiempo Real</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[Webhook Trigger] --> B[GPT-4 Vision API]
+    B --> C{Confianza > 80%?}
+    C -->|Sí| D[Text-to-Speech]
+    C -->|No| E[Queue Voluntario]
+    E --> F[Twilio Video Call]
+    D --> G[Respuesta Usuario]
+    F --> G
+    G --> H[MongoDB Log]
+    H --> I[Analytics Dashboard]
+    style A fill:#FF9800,color:#fff
+    style I fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Persona Ciega] --> B[Activa Be My Eyes]
+    B --> C[Cámara Smartphone]
+    C --> D[IA GPT-4 Vision]
+    D --> E{Necesita Ayuda<br/>Humana?}
+    E -->|No| F[Respuesta IA Voz]
+    E -->|Sí| G[Conecta Voluntario]
+    G --> H[Videollamada]
+    H --> I[Asistencia Visual]
+    I --> J[Tarea Completada]
+    F --> J
+    J --> K[Registro Actividad]
+    K --> L[Análisis Mejora]
+    style A fill:#9C27B0,color:#fff
+    style J fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 2 -->
+        <div class="flow-section">
+            <h2>2. Sistema de Comunicación para Personas Sordas</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[Zoom Webhook] --> B[Audio Stream Capture]
+    B --> C[Whisper AI API]
+    C --> D[Speaker Diarization]
+    D --> E[Real-time WebSocket]
+    E --> F[Frontend Display]
+    F --> G{Usuario Responde?}
+    G -->|Texto| H[Display as Text]
+    G -->|Voz| I[TTS Azure]
+    H --> J[Google Docs Transcript]
+    I --> J
+    J --> K[Email con SendGrid]
+    style A fill:#2196F3,color:#fff
+    style K fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Reunión Laboral] --> B[Persona Sorda Presente]
+    B --> C[App Ava Activada]
+    C --> D[Captura Audio Ambiental]
+    D --> E[IA Transcripción]
+    E --> F[Identifica Hablantes]
+    F --> G[Subtítulos en Pantalla]
+    G --> H{Persona Sorda<br/>Desea Hablar?}
+    H -->|Sí| I[Escribe o Habla]
+    I --> J[Voz Sintetizada]
+    J --> K[Grupo Escucha]
+    H -->|No| L[Continúa Siguiendo]
+    K --> L
+    L --> M[Fin Reunión]
+    M --> N[Transcripción Completa]
+    N --> O[Email Automático]
+    style B fill:#2196F3,color:#fff
+    style O fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 3 -->
+        <div class="flow-section">
+            <h2>3. Navegación Autónoma con Control Ocular</h2>
+            <div class="simple-code">
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Persona con Movilidad Reducida] --> B[Sistema Tobii Activado]
+    B --> C[Calibración Ocular]
+    C --> D[Usuario Mira Pantalla]
+    D --> E[Cursor Sigue Ojos]
+    E --> F{Desea Ejecutar?}
+    F -->|Parpadeo Doble| G[Click Ejecutado]
+    F -->|No| D
+    G --> H[Navegador Web]
+    H --> I[Lector Pantalla NVDA]
+    I --> J[Audio Describe Contenido]
+    J --> K{Usuario Necesita<br/>Escribir?}
+    K -->|Sí| L[Teclado Virtual]
+    L --> M[Escribe con Ojos]
+    K -->|No| N[Continúa Navegando]
+    M --> N
+    N --> O[Tarea Completada]
+    style A fill:#FF5722,color:#fff
+    style O fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 4 -->
+        <div class="flow-section">
+            <h2>4. Proceso de Contratación Inclusiva Automatizada</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[Form Submission] --> B[Extract Accessibility Data]
+    B --> C[Power Automate API]
+    C --> D{Tipo Discapacidad}
+    D -->|Visual| E[Schedule + Audio Tools]
+    D -->|Auditiva| F[Book Interpreter]
+    D -->|Motriz| G[Setup Remote Only]
+    E --> H[Google Calendar Event]
+    F --> H
+    G --> H
+    H --> I[Send Email Confirmation]
+    I --> J[Airtable Database]
+    J --> K[HR Dashboard Update]
+    style A fill:#9C27B0,color:#fff
+    style K fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Candidato con Discapacidad] --> B[Portal Accesible WCAG]
+    B --> C[Formulario Adaptativo]
+    C --> D[Declara Necesidades]
+    D --> E[Power Automate Procesa]
+    E --> F[Asigna Ajustes Razonables]
+    F --> G[Entrevista Programada]
+    G --> H{Tipo de Discapacidad}
+    H -->|Visual| I[Video + Audio Descripción]
+    H -->|Auditiva| J[Video + Subtítulos + Intérprete]
+    H -->|Motriz| K[Entrevista Remota Adaptada]
+    I --> L[Evaluación Técnica]
+    J --> L
+    K --> L
+    L --> M[Formato Accesible Personalizado]
+    M --> N[Tiempo Extra si Necesario]
+    N --> O[Resultados a RRHH]
+    O --> P[Decisión Equitativa]
+    style A fill:#9C27B0,color:#fff
+    style P fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 5 -->
+        <div class="flow-section">
+            <h2>5. Educación Virtual Accesible con Múltiples Canales</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[Moodle Webhook] --> B[User Profile Check]
+    B --> C{Accessibility Type}
+    C -->|Visual| D[Alt Text Generator]
+    C -->|Auditiva| E[Auto Subtitle API]
+    C -->|Cognitiva| F[Text Simplifier GPT]
+    D --> G[Content Transformer]
+    E --> G
+    F --> G
+    G --> H[Zoom Recording Capture]
+    H --> I[Whisper Transcription]
+    I --> J[Summary Generator]
+    J --> K[Upload to Google Drive]
+    K --> L[Notify Student Email]
+    style A fill:#673AB7,color:#fff
+    style L fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Estudiante con Discapacidad] --> B[Plataforma LMS Moodle]
+    B --> C[Contenido Multimedia]
+    C --> D{Tipo Accesibilidad}
+    D -->|Visual| E[Lector Pantalla + Audio]
+    D -->|Auditiva| F[Subtítulos + Transcripción]
+    D -->|Cognitiva| G[Texto Simplificado]
+    E --> H[Material Adaptado]
+    F --> H
+    G --> H
+    H --> I[Clase Virtual Zoom]
+    I --> J[Grabación Automática]
+    J --> K[IA Genera Subtítulos]
+    K --> L[Crea Resumen Accesible]
+    L --> M[Evaluación Adaptativa]
+    M --> N[Formato Personalizado]
+    N --> O[Tiempo Extendido]
+    O --> P[Entrega Assignment]
+    P --> Q[Feedback Accesible]
+    style A fill:#673AB7,color:#fff
+    style Q fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 6 -->
+        <div class="flow-section">
+            <h2>6. Asistente de Transporte Público Inteligente</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[Voice Input API] --> B[Speech to Text]
+    B --> C[Google Maps API]
+    C --> D[IoT Sensors Query]
+    D --> E[Accessibility Filter]
+    E --> F[Calculate Best Route]
+    F --> G[Reserve Space API]
+    G --> H[Driver Notification SMS]
+    H --> I[Real-time GPS Tracking]
+    I --> J{Arrived?}
+    J -->|No| I
+    J -->|Yes| K[Vibration + Audio Alert]
+    K --> L[Rating Form Webhook]
+    L --> M[Analytics Database]
+    style A fill:#FF5722,color:#fff
+    style M fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Usuario con Movilidad Reducida] --> B[App Transporte]
+    B --> C[Ingresa Destino por Voz]
+    C --> D[IA Analiza Accesibilidad]
+    D --> E[Verifica Rampas/Elevadores]
+    E --> F[Calcula Ruta Óptima]
+    F --> G[Muestra Opciones Accesibles]
+    G --> H[Usuario Selecciona]
+    H --> I[Reserva Espacio Prioritario]
+    I --> J[Notifica a Conductor]
+    J --> K[GPS Tracking Tiempo Real]
+    K --> L[Alerta Próxima Parada]
+    L --> M{Llegó Destino?}
+    M -->|No| K
+    M -->|Sí| N[Aviso Vibración + Audio]
+    N --> O[Conductor Asiste Descenso]
+    O --> P[Usuario Califica Servicio]
+    P --> Q[Datos Mejoran Sistema]
+    style A fill:#FF5722,color:#fff
+    style Q fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 7 -->
+        <div class="flow-section">
+            <h2>7. Sistema de Salud Mental con Soporte Adaptado</h2>
+            <div class="simple-code">
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Persona con Discapacidad] --> B[Crisis Emocional]
+    B --> C[Accede App Salud Mental]
+    C --> D{Canal Preferido}
+    D -->|Texto| E[Chat con IA Terapéutica]
+    D -->|Voz| F[Llamada Asistente Virtual]
+    D -->|Lengua Señas| G[Video Avatar Señas]
+    E --> H[Evalúa Nivel Urgencia]
+    F --> H
+    G --> H
+    H --> I{Requiere Profesional?}
+    I -->|No| J[Técnicas Autoayuda]
+    I -->|Sí| K[Conecta Psicólogo]
+    J --> L[Ejercicios Respiración]
+    K --> M[Videoconsulta Accesible]
+    M --> N[Historial Médico Disponible]
+    L --> O[Seguimiento Automático]
+    N --> O
+    O --> P[Recordatorios Medicación]
+    P --> Q[Check-in Semanal]
+    Q --> R[Ajusta Plan Tratamiento]
+    style B fill:#f44336,color:#fff
+    style R fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 8 -->
+        <div class="flow-section">
+            <h2>8. Espacio de Trabajo Inteligente Auto-Adaptable</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[RFID Scanner] --> B[User Profile Fetch]
+    B --> C[IoT Desk API]
+    C --> D[Adjust Height]
+    D --> E[Monitor Settings API]
+    E --> F[Smart Lights Control]
+    F --> G[HVAC Temperature API]
+    G --> H[Launch Software Script]
+    H --> I[Environmental Sensors]
+    I --> J{Fatigue Detected?}
+    J -->|Yes| K[Break Notification]
+    J -->|No| I
+    K --> L[Log to Database]
+    L --> M[ML Model Training]
+    style A fill:#9C27B0,color:#fff
+    style M fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Empleado con Discapacidad] --> B[Llega a Oficina]
+    B --> C[Badge RFID Detectado]
+    C --> D[Sistema Identifica Perfil]
+    D --> E[Carga Configuración Personal]
+    E --> F{Tipo Adaptación}
+    F -->|Visual| G[Escritorio Ajusta Altura]
+    F -->|Auditiva| H[Activa Bucle Magnético]
+    F -->|Motriz| I[Teclado Adaptado Aparece]
+    G --> J[Monitor Amplia Texto]
+    H --> J
+    I --> J
+    J --> K[Iluminación Personalizada]
+    K --> L[Temperatura Ajustada]
+    L --> M[Software Asistivo Carga]
+    M --> N[Jornada Laboral]
+    N --> O[Sensores Monitorean]
+    O --> P{Detecta Fatiga?}
+    P -->|Sí| Q[Sugiere Descanso]
+    P -->|No| N
+    Q --> R[Usuario Acepta]
+    R --> S[Sistema Registra Datos]
+    S --> T[Optimiza Configuración]
+    style A fill:#9C27B0,color:#fff
+    style T fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 9 -->
+        <div class="flow-section">
+            <h2>9. Capacitación Laboral con Realidad Virtual Adaptada</h2>
+            <div class="simple-code">
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Nuevo Empleado Discapacidad] --> B[Programa Onboarding VR]
+    B --> C[Evalúa Perfil Accesibilidad]
+    C --> D{Adapta Experiencia VR}
+    D -->|Visual| E[Audio Espacial 3D Detallado]
+    D -->|Auditiva| F[Visuales Aumentadas + Subtítulos]
+    D -->|Motriz| G[Control Voz + Mirada]
+    E --> H[Simulación Puesto Trabajo]
+    F --> H
+    G --> H
+    H --> I[Entorno Virtual Realista]
+    I --> J[Practica Tareas Reales]
+    J --> K[IA Evalúa Desempeño]
+    K --> L{Domina Habilidad?}
+    L -->|No| M[Ajusta Dificultad]
+    M --> J
+    L -->|Sí| N[Certificación Virtual]
+    N --> O[Transición Trabajo Real]
+    O --> P[Mentor Asignado]
+    P --> Q[Seguimiento 90 Días]
+    Q --> R[Evaluación Éxito]
+    style A fill:#673AB7,color:#fff
+    style R fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flujo 10 -->
+        <div class="flow-section">
+            <h2>10. Detector de Emergencias con Respuesta Automática</h2>
+            <div class="split-view">
+                <div class="n8n-flow">
+                    <h3>Flujo N8N:</h3>
+                    <div class="mermaid">
+graph LR
+    A[Wearable IoT Sensor] --> B[Health Monitoring API]
+    B --> C{Anomaly Detected?}
+    C -->|No| B
+    C -->|Yes| D[Trigger Emergency]
+    D --> E[GPS Location Service]
+    E --> F[Twilio SMS Contacts]
+    F --> G[911 API Call]
+    G --> H[Send Medical Records]
+    H --> I[Notify Neighbors App]
+    I --> J[Activate Home Cameras]
+    J --> K[Dispatch Confirmation]
+    K --> L[Hospital System Update]
+    style A fill:#E91E63,color:#fff
+    style L fill:#4CAF50,color:#fff
+                    </div>
+                </div>
+                <div class="code-block">
+                    <h3>Código Mermaid:</h3>
+                    <pre><code>graph TD
+    A[Persona con Discapacidad] --> B[Dispositivo Wearable]
+    B --> C[Sensores Monitoreando]
+    C --> D{Detecta Emergencia?}
+    D -->|No| C
+    D -->|Sí| E[Alerta Activada]
+    E --> F[Envía Ubicación GPS]
+    F --> G[Notifica Contactos]
+    G --> H[Llama Servicios Emergencia]
+    H --> I[Transmite Datos Médicos]
+    I --> J[Ambulancia Despachada]
+    J --> K[Vecinos Alertados]
+    K --> L[Cámaras Activan Grabación]
+    L --> M[Paramédicos Llegan]
+    M --> N[Acceso Historial Médico]
+    N --> O[Atención Apropiada]
+    O --> P[Seguimiento Hospitalario]
+    style A fill:#E91E63,color:#fff
+    style P fill:#4CAF50,color:#fff</code></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                fontSize: '12px'
+            }
+        });
+    <\/script>
+</body>
+</html>
+            `);
+            ventanaCodigo.document.close();
+        }
+    </script>
+</body>
+</html>
